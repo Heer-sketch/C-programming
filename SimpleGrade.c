@@ -1,26 +1,50 @@
-#include<stdio.h>
-void main()
-{
-    int num;
-    char ch;
-    printf("Enter value:-");
-    scanf("%d",&num);
-    ch=num<10
+#include <stdio.h>
 
-? 'A'
-:num <=20
-?'B':printf("A");
-printf("\n%c",ch);
-if(ch =='A' || ch == 'B')
+int main()
 {
-    printf("Hii how r u");
-}
-else
-{
-    printf("good");
-    
-}
+    int score;
+    char grade;
 
-      
-        
+    printf("Enter a score:- ");
+    scanf("%d", &score);
+
+    grade = (score >= 90) ? 'A' : 
+            (score >= 80) ? 'B':
+            (score >= 70) ? 'C': 
+            (score >= 60) ? 'D':
+     'F';
+
+    printf("Your grade is: %c\n", grade);
+
+    switch (grade)
+    {
+    case 'A':
+        printf("Excellent \n");
+        break;
+    case 'B':
+        printf("good work\n");
+        break;
+    case 'C':
+        printf("great job\n");
+        break;
+    case 'D':
+        printf("You passed\n");
+        break;
+    case 'F':
+        printf("Sorry, you failed\n");
+        break;
+    default:
+        printf("Invalid grade\n");
+        break;
+    }
+    if (grade >= 'A' && grade <= 'D')
+    {
+        printf("Congratulations\n");
+    }
+    else
+    {
+        printf("Better luck next time\n");
+
+        return 0;
+    }
 }
